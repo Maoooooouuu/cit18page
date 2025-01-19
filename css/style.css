@@ -1,0 +1,446 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Light gradient background */
+    min-height: 100vh;
+}
+
+/* General Styling */
+h1, h5 {
+    color: #222;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 5px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.4rem;
+    opacity: 0.9;
+}
+
+/* Section Styling */
+section {
+    padding: 4rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+section h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: #222;
+}
+
+section h5 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+section p {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+/* About Me Section */
+#about {
+    background: linear-gradient(120deg, #e3ffe7, #d9e7ff);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+#about .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem;
+    border-radius: 10px;
+}
+
+#about img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Portfolio */
+.portfolio-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.folio-item {
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+.folio-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.folio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 4px solid #ddd;
+}
+
+.folio-item .folio-title {
+    padding: 1rem;
+    text-align: center;
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+/* Skill Bars */
+.skill-bars {
+    max-width: 600px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 2rem 1rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.skill-bars li {
+    margin-bottom: 1.5rem;
+}
+
+.skill-bars strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #222;
+    font-weight: bold;
+}
+
+.progress {
+    position: relative;
+    height: 25px;
+    background: #f0f0f0;
+    border-radius: 12.5px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.progress::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    transition: width 1.5s ease-in-out;
+}
+
+.percent80::before {
+    width: 80%;
+}
+
+.percent70::before {
+    width: 70%;
+}
+
+.percent50::before {
+    width: 50%;
+}
+
+.percent25::before {
+    width: 25%;
+}
+
+.percent5::before {
+    width: 5%;
+}
+
+.progress span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.9rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Buttons */
+.contact-form button {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+    transition: background 0.4s, transform 0.3s, box-shadow 0.3s;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.contact-form button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button:active {
+    background: linear-gradient(135deg, #5a10b8, #1e60c1);
+    transform: translateY(0);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form button:focus {
+    outline: none;
+    box-shadow: 0 0 8px 3px rgba(38, 143, 255, 0.5);
+}
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 5px solid rgba(255, 255, 255, 0.1);
+}
+
+footer ul li a {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #aaa;
+}
+
+/* Resume Section Styling */
+#resume {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #e3f2fd, #f5f7fa);
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 1200px;
+}
+
+#resume h1, #resume h2, #resume h5 {
+    color: #222;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#resume .lead {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.resume-timeline {
+    margin-top: 2rem;
+}
+
+.resume-header {
+    margin-bottom: 1.5rem;
+}
+
+.timeline-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.timeline-block {
+    display: flex;
+    align-items: flex-start;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-ico {
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-header {
+    text-align: left;
+}
+
+.timeline-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.timeline-header p {
+    font-size: 1rem;
+    color: #888;
+}
+
+.timeline-content {
+    text-align: left;
+}
+
+.timeline-content h4 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: #444;
+}
+
+.timeline-content p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.timeline-content p:last-child {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #666;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .timeline-wrap {
+        gap: 1.5rem;
+    }
+
+    .timeline-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .timeline-ico {
+        margin: 0 auto 1rem;
+    }
+
+    .timeline-header {
+        text-align: center;
+    }
+
+    .timeline-content {
+        text-align: center;
+    }
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 2rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #6a11cb;
+}
+
+/* Add spacing for fixed nav */
+header {
+    margin-top: 70px; /* Height of navigation bar */
+}
